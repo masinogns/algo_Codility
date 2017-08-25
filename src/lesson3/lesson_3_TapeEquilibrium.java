@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+package lesson3;
+
 import java.util.stream.IntStream;
 
 /**

@@ -1,7 +1,7 @@
-import org.junit.Test;
+package lesson7;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import lesson7.lesson_7_Fish;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

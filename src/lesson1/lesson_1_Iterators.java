@@ -1,3 +1,5 @@
+package lesson1;
+
 /**
  * Created by masinogns on 2017. 5. 24..
  * 100 score

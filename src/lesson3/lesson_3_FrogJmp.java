@@ -1,3 +1,5 @@
+package lesson3;
+
 /**
  * Created by masinogns on 2017. 5. 25..
  *

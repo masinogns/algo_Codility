@@ -1,3 +1,6 @@
+package lesson7;
+
+import lesson7.lesson_7_Bracket;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

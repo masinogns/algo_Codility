@@ -1,4 +1,4 @@
-
+package lesson7;
 /**
  * Created by masinogns on 2017. 8. 20..
  * 첫번째 방법 실패 !!
@@ -25,7 +25,8 @@
  *     // 살아있는 물고기 수를 return한다
  * }
  *
- * // 출처 .. http://hangaebal.tistory.com/115 참고
+ * 출처 .. http://hangaebal.tistory.com/115 참고
+ *
  */
 
 import java.util.Stack;

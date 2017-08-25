@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package lesson3;
+
 import java.util.*;
 
 
