@@ -4,47 +4,39 @@ import java.util.*;
 
 /**
  * Created by masinogns on 2017. 5. 28..
+ *
+ * N개의 정수 배열로 이루어진 배열 Array
+ * A 배열에 없는 가장 최소의 양의 정수를 출력하는 것
+ *
+ * 양수의 갯수가 0개이면 모두 음수라는 뜻 return 1
+ * 양수의 갯수가 1개이면 하나만 양수라는 것 return 1
+ * 양수의 갯수가 2개이면 두개가 양수라는 것 If
+ *
  */
 public class lesson_4_Missinginteger {
-    public int solution(int[] A){
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
-        int result = 0;
-        int counter = 0;
-        int returnValue = 0;
-
-        for (int a : A){
-            hashMap.put(a, counter);
+    public int solution(int[] A) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i = 0; i < A.length+1; i++){
+            arrayList.add(i, i+1);
         }
+        int min = 100000, value = 0, indexValue = 0;
 
-        for (int a : A){
-            if (hashMap.containsKey(a)){
-                hashMap.put(a, hashMap.get(a)+1);
+        for (int i = 0; i < A.length; i++){
+            indexValue = arrayList.indexOf(A[i]);
+            if ( indexValue != -1){
+                arrayList.remove(indexValue);
             }
         }
 
-        for (int key : hashMap.keySet()){
-            System.out.print(key+" : ");
-            System.out.println(hashMap.get(key));
-        }
-
-        // https://www.mkyong.com/java8/java-8-convert-map-to-list/ convert map to list
-        List<Integer> convert = new ArrayList<>(hashMap.keySet());
-
-        for(int i = 0; i < convert.size()-1; i++){
-//            System.out.println(convert.get(i));
-            result = convert.get(i+1) - convert.get(i);
-            if (result != 1){
-                returnValue = convert.get(i+1)-1;
+        Iterator iterator = arrayList.iterator();
+        while (iterator.hasNext()) {
+            value = (int)iterator.next();
+            if (value < min){
+                min = value;
             }
-//            System.out.println(result);
         }
-//        System.out.println(returnValue);
-        return returnValue;
+
+        return min;
     }
 
-    public static void main(String[] args) {
-        lesson_4_Missinginteger controller = new lesson_4_Missinginteger();
-        int[] A = {1,3,6,4,1,2};
-        controller.solution(A);
-    }
 }
