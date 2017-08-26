@@ -39,4 +39,20 @@ public class Missinginteger {
         return min;
     }
 
+    public int solution2(int[] A){
+        int result = 1;
+
+        HashSet<Integer> hashSet = new HashSet<>();
+
+        for (int i : A){
+            hashSet.add(i);
+        }
+
+        while (hashSet.contains(result)){
+            result++;
+        }
+
+        return result;
+    }
+
 }
