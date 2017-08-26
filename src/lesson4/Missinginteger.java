@@ -13,7 +13,7 @@ import java.util.*;
  * 양수의 갯수가 2개이면 두개가 양수라는 것 If
  *
  */
-public class lesson_4_Missinginteger {
+public class Missinginteger {
     public int solution(int[] A) {
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (int i = 0; i < A.length+1; i++){
