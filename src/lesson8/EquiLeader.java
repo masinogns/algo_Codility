@@ -30,9 +30,11 @@ public class EquiLeader {
             }
         }
 
+        // 그래서 찾은 리더 값은 다음 storeLeader에 저장이 된다
         if (size>0)
             storeLeader = findLeader;
 
+        // leader 값의 총 갯수를 저장하는 로직
         int leaderSize = 0;
         for (int i : A){
             if (storeLeader == i)
@@ -41,6 +43,20 @@ public class EquiLeader {
 
         /**
          * 왼쪽 배열의 사이즈와 오른쪽 배열의 사이즈를 증가,감소해가면서 비교
+         *
+         * 만약 리더 값과 같다면 {
+         *      왼쪽 리더 사이즈 + 1
+         *      총 리더 사이즈 - 1
+         *
+         *      왼쪽 배열 사이즈 + 1
+         *      총 배열 사이즈 - 1
+         *
+         *      만약 왼쪽 리더 사이즈가 왼쪽 배열의 n/2보다 크고 && 오른쪽 리더 사이즈도 오른쪽 배열의 n/2보다 크다면
+         *      서로 리더에 만족하는 것이므로
+         *      목표 카운트 + 1을 해준다 ( equileader + 1)
+         * }
+         *
+         * 우리의 목표는 몇개의 equi leader인가이기 때문이다
          */
         int leftSize = 0, rightSize = A.length, leftLeaderSize = 0;
         int ret = 0;
