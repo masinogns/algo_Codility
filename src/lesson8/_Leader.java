@@ -89,6 +89,7 @@ public class _Leader {
                     size+=1;
             }
         }
+
         int candidate = 0;
         if (size > 0)
             candidate = value;
