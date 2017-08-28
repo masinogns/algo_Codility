@@ -24,6 +24,7 @@ public class _MaximumSliceProblem {
         return result;
     }
 
+    // O(n^2)
     public int quadraticMaxSlice(int[] A){
         int n = A.length, result = 0, sum = 0;
 
@@ -38,6 +39,7 @@ public class _MaximumSliceProblem {
         return result;
     }
 
+    // O(n)
     public int goldenMaxSlice(int[] A) {
         int sum = 0, result = 0;
 
