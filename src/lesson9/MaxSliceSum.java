@@ -11,6 +11,7 @@ package lesson9;
  * result의 값과 sum의 값을 비교한 후에
  * sum의 값이 더 크면 result에 저장한다
  *
+ *
  */
 public class MaxSliceSum {
     public int maxSliceSum(int[] A) {
