@@ -51,7 +51,20 @@ public class PassingCars {
     }
 
     public int solution2(int[] A){
+        int count = 0, ret = 0;
 
-        return 0;
+        for (Integer a : A){
+            if (a == 0){
+                count++;
+            }else {
+                ret += count;
+            }
+        }
+
+        if (ret > 1000000000||ret<0){
+            ret = -1;
+        }
+
+        return ret;
     }
 }
