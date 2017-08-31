@@ -17,12 +17,12 @@ public class Problem3Test {
     // JUNIT에서 int[] 테스트하는 방법
     @Test
     public void test(){
-//        assertEquals(new int[]{1,1}, application.solution(
-//                new int[][]{
-//                        {1,4},
-//                        {3,4},
-//                        {3,1}
-//                }));
+        assertArrayEquals(new int[]{1,1}, application.solution(
+                new int[][]{
+                        {1,4},
+                        {3,4},
+                        {3,1}
+                }));
 
         int[] a = application.solution(new int[][]{
                 {1,4},

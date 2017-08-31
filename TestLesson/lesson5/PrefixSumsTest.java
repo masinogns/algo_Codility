@@ -11,12 +11,12 @@ import static org.junit.Assert.*;
  * Prefix sum 수열의 구간 합 구하기
  */
 public class PrefixSumsTest {
-    PrefixSums application;
+    _PrefixSums application;
 
     int[] A = new int[]{2,3,5,4,1,3};
     @Before
     public void setUp() throws Exception {
-        application = new PrefixSums();
+        application = new _PrefixSums();
     }
 
     @Test

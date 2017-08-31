@@ -19,7 +19,7 @@ public class lesson_7_Bracket {
                     return 0;
                 }else {
                     if (stack.peek() == '(')
-                    stack.pop();
+                        stack.pop();
                     else return 0;
                 }
             }

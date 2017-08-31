@@ -14,7 +14,7 @@ package lesson5;
  출처: http://www.crocus.co.kr/599 [Crocus]
  *
  */
-public class PrefixSums {
+public class _PrefixSums {
     int[] P;
 
     public int[] prefixSum(int[] A) {
