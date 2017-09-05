@@ -17,30 +17,30 @@
  마지막 행까지 모두 내려왔을 때, 얻을 수 있는 점수의 최대값을 return하는 solution 함수를 완성해 주세요.
  위 예의 경우, 1행의 네번째 칸 (5), 2행의 세번째 칸 (7), 3행의 첫번째 칸 (4) 땅을 밟아
  16점이 최고점이 되므로 16을 return 하면 됩니다.
+
+ D[N][4] = N행 i열일 때의 최고 값
  */
 public class Problem5 {
 
     public int solution(int[][] land) {
         int answer = 0;
 
-        int max = 0, index = 0;
+        int size = land.length;
+        int[][] D = new int[size+1][5];
 
-        for (int i = 0; i < land.length; i++){
-            max = 0;
+        D[1][1] = land[0][0];
+        D[1][2] = land[0][1];
+        D[1][3] = land[0][2];
+        D[1][4] = land[0][3];
 
-            for (int j = 0; j < 4; j++){
-                if (max < land[i][j]){
-                    max = land[i][j];
-                    index = j;
-                }
-            }
-
-            answer += max;
-
-            if (i != land.length-1)
-                land[i+1][index] = 0;
+        for (int i = 2; i <= size; i++){
+            D[i][1] = Math.max(Math.max(D[i-1][2],D[i-1][3]),D[i-1][4])+land[i-1][0];
+            D[i][2] = Math.max(Math.max(D[i-1][1],D[i-1][3]),D[i-1][4])+land[i-1][1];
+            D[i][3] = Math.max(Math.max(D[i-1][1],D[i-1][2]),D[i-1][4])+land[i-1][2];
+            D[i][4] = Math.max(Math.max(D[i-1][1],D[i-1][2]),D[i-1][3])+land[i-1][3];
         }
 
+        answer = Math.max(Math.max(Math.max(D[size][1],D[size][2]),D[size][3]),D[size][4]);
         return answer;
     }
 }
